@@ -8,9 +8,16 @@
       <?php
         include("menu.php");
       ?> 
-      <!--Conteudo vai aqui em baixo-->
-
-      <!--Conteudo teermina aqui -->
+      
+        <main>
+          <div class="container">
+            <div>
+              <!--Conteudo vai aqui em baixo-->
+                <?php include("clientes.php");?>
+              <!--Conteudo termina aqui -->
+            </div>
+          </div>
+        </main>
       <?php
         include("scripts.php");
       ?> 
