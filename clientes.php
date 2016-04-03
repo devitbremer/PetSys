@@ -1,4 +1,19 @@
-<div class="row">
+<!DOCTYPE html>
+  <html>
+    <?php
+        include("head.php");
+      ?>
+
+    <body>
+      <?php
+        include("menu.php");
+      ?> 
+      
+        <main>
+          <div class="container">
+            <div>
+              <!--Conteudo vai aqui em baixo-->
+                <div class="row">
                   <form class="col s12">
                     <div class="row">
                       <div class="input-field col s5">
@@ -68,5 +83,20 @@
                         <label for="email">Email</label>
                       </div>
                     </div>
+                    <div class="row">
+                      <div class="input-field col s3">
+                      <button class="btn waves-effect waves-light" type="submit" name="action">Salvar
+                      <i class="material-icons right">save</i>
+                      </button>
+                    </div>
                   </form>
                 </div>
+              <!--Conteudo termina aqui -->
+            </div>
+          </div>
+        </main>
+      <?php
+        include("scripts.php");
+      ?> 
+    </body>
+  </html>

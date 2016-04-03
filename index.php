@@ -13,7 +13,7 @@
           <div class="container">
             <div>
               <!--Conteudo vai aqui em baixo-->
-                <?php include("clientes.php");?>
+              
               <!--Conteudo termina aqui -->
             </div>
           </div>
