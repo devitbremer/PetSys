@@ -27,44 +27,52 @@ if(isset($_POST['Salvar'])){
  }
 
 
+ 
+ 
+	
 if(isset($_POST['Editar'])){
 	
-	
-	$query = "SELECT nome_produto, codigo_barra, preco, quantidade FROM produto WHERE codigo_barra = $codigo_barra";
-	echo ("<br> $codigo_barra");
-	$selecionar = mysql_query($query);
-	$row = mysql_fetch_assoc($selecionar);
-	foreach( $row as $key => $value )
-	{
-		$_POST[$key] = $value;
+	if(empty(!$codigo_barra)){
+		$query = "SELECT nome_produto, codigo_barra, preco, quantidade FROM produto WHERE codigo_barra = $codigo_barra";
+			echo ("<br> $codigo_barra");
+			$selecionar = mysql_query($query);
+			$row = mysql_fetch_assoc($selecionar);
+			foreach( $row as $key => $value )
+			{
+				$_POST[$key] = $value;
+			}
+				@$nome_produto = $row['nome_produto'];
+				@$codigo_barra = $row['codigo_barra'];
+				@$preco = $row['preco'];
+				@$quantidade = $row['quantidade'];
+	}else{
+		echo('Insira um codigo de barra.');
 	}
-	
-	@$nome_produto = null;
-	@$codigo_barra = null;
-	@$preco = null;
-	@$quantidade = null;
-	
 }
 
 if(isset($_POST['Excluir'])){
 	
-	$query = "DELETE FROM produto WHERE codigo_barra = $codigo_barra";
+	if(empty(!$codigo_barra)){
+		$query = "DELETE FROM produto WHERE codigo_barra = $codigo_barra";
 	
-	$result_excluir = mysql_query($query);
+		$result_excluir = mysql_query($query);
 		
 		if ($result_excluir) echo "<h2> Registro excluido com sucesso!!!</h2>";
 		else echo "<h2> Nao consegui excluir!!!</h2>";
 		
-	@$nome_produto = null;
-	@$codigo_barra = null;
-	@$preco = null;
-	@$quantidade = null;
+		@$nome_produto = null;
+		@$codigo_barra = null;
+		@$preco = null;
+		@$quantidade = null;
+	}else{
+		echo('Insira um codigo de barra.');
+	}
 
 }
 
 ?>
-
-<http>
+<!DOCTYPE html>
+<html>
 
 	<head>
 		<title>Cadastro produto</title>
@@ -74,6 +82,9 @@ if(isset($_POST['Excluir'])){
 
 
 	<body>
+	<?php
+        include("menu.php");
+      ?>
 		<form action=# method=POST>
 			<h2>Cadastro Produto</h2>
 	
@@ -90,10 +101,13 @@ if(isset($_POST['Excluir'])){
 
 		</form>
 
+		<?php
+        include("scripts.php");
+      ?> 
 	</body>
 
 
 
-</http>
+</html>
 
 

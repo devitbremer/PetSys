@@ -9,7 +9,7 @@
               <div class="collapsible-body" style="">
                 <ul>
                   <li class="bold grey darken-2"><a class="waves-effect waves-teal white-text hoverable" href="clientes.php">Clientes</a></li>
-                  <li class="bold grey darken-2"><a class="waves-effect waves-teal white-text hoverable" href="#">Produtos</a></li>
+                  <li class="bold grey darken-2"><a class="waves-effect waves-teal white-text hoverable" href="produtos.php">Produtos</a></li>
                   <li class="bold grey darken-2"><a class="waves-effect waves-teal white-text hoverable" href="#">Serviços</a></li>
                   <li class="bold grey darken-2"><a class="waves-effect waves-teal white-text hoverable" href="#">Pets</a></li>
                 </ul>
